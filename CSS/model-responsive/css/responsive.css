@@ -4,9 +4,22 @@
         margin: 0px auto;
     }
 
+    #banner h1{
+        font-size: 35px;
+        text-align: center;
+    }
+
     .card{
         width: 17%;
         margin: 1.45%;
+    }
+
+    .card p{
+        display: block;
+        width: 90%;
+        margin: 0px auto;
+        text-align: center;
+        margin-top: 10px;
     }
     #articles{
         width: 65%;
@@ -22,4 +35,235 @@
     #footer #browsers img{
         width: 15%;
     }
+
+    #footer h5{
+        font-size: 30px;
+    }
+
+
+}
+
+@media (max-width: 1080px) {
+    .card .category{
+        font-size: 17px;
+    }
+
+    .card .description{
+        font-size: 12px;
+    }
+
+    #articles {
+        width: 61%;
+    }
+}
+
+@media (max-width: 970px) {
+    #articles {
+        width: 59%;
+    }
+
+    #footer h5{
+        font-size: 22px;
+    }
+
+     #footer .wrap > div {
+        width: 25%;
+        margin: 10px;
+    } 
+
+    
+    #footer #browsers img{
+        width: 10%;
+    }
+
+    #footer img {
+        width: 100%;
+    }
+
+    #footer .wrap > div:nth-child(2) {
+        margin: 10px 50px;
+    }  
+
+    #social .overlay {
+        font-size: 10px;
+        line-height: 20px;
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 925px){
+    #articles{
+        width: 65%;
+    }
+
+    #aside {
+        width: 25%;
+    }
+    #aside input[type="text"] {
+        width: 75%;
+    }
+    #login input[type="email"], #login input[type="password"] {
+        width: 72%;
+    }
+    #login input[type="submit"], #login input[type="reset"], #login input[type="button"], #login button {
+        font-size: 12px;
+        margin-left: 8%;
+        width: 35%;
+    }
+    #aside > h3 {
+        font-size: 20px;
+    }
+
+    #aside.box{
+        width: 95%;
+        min-height: 240px;
+        height: auto;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    #banner h1{
+        font-size: 28px;
+    }
+
+    .card .description {
+        display: none;
+    }
+
+    .card{
+        height: auto;
+    }
+
+    .card .category{
+        font-size: 15px;
+        margin-top: -23;
+    }
+    #login input[type="email"], #login input[type="password"] {
+        width: 60%;
+      }
+}
+
+@media (max-width: 724px){
+    #header {
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+    }
+
+
+    #header #logo, #header #menu{
+        display: block;
+        float: none;
+        margin: 0px auto;
+    }
+
+    #header #menu {
+        width: 80%;
+        text-align: center;
+    }
+
+    #aside > h3 {
+        font-size: 16px;
+    }
+
+    #social .overlay {
+        font-size: 8px;
+    }
+
+
+}
+
+@media (max-width: 670px){
+
+    .card {
+        float: none;
+        width: 50%;
+        margin: 10px auto;
+        height: auto;
+    }
+
+    .card:last-child {
+        margin: 10px auto;
+    }
+
+    .card .description{
+        display: block;
+        margin: 10px auto;
+    }
+
+    #articles, #aside{
+        width: 100%;
+        float: none;
+    }
+
+    #aside {
+        margin: 10px auto;
+    }
+
+    #articles {
+        margin-top: -50px;
+    }
+
+    #aside input[type="text"] {
+        width: 92%;
+    }
+
+    #login input[type="email"], #login input[type="password"]{
+        width: 88%;
+    }
+    #social .overlay {
+        font-size: 18px;
+    }
+
+    #footer .wrap > div {
+        width: 100%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    #footer {
+        height: auto;
+        padding-bottom: 70px;
+    }
+
+    #footer .wrap > div:nth-child(2) {
+        margin-left: auto;
+        margin-right: auto;
+    }  
+
+    #footer p img {
+        width: 80%;
+    }
+    
+}
+
+@media (max-width: 510px){
+    #aside input[type="text"] {
+        width: 83%;
+    }
+
+    #login input[type="email"], #login input[type="password"]{
+        width: 83%;
+    }
+
+    #header .wrap {
+        width: 100%;
+    }
+
+    #header #menu{
+        width: 100%;
+        height: auto;
+    }
+
+    #banner h1{
+        font-size: 25;
+    }
+
+    #articles .data{
+        float: none;
+        margin: 0px;
+    }
+
+
 }
