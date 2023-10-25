@@ -1,0 +1,20 @@
+// Modules
+
+$general-font: sans-serif, Helvetica, Arial;
+$background-color: #CCC;
+$background-colortwo: beige;
+$letter-color: aliceblue;
+$letter-secondary: gray;
+
+body{
+    font-family: $general-font;
+    background-color: $background-color;
+}
+
+// inheritance
+
+%config-box{
+    margin: 10px auto;
+    padding: 20px;
+}
+

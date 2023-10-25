@@ -1,0 +1,25 @@
+body {
+  background-color: lightblue;
+}
+.box {
+  background-color: aliceblue;
+  box-shadow: 0px 0px 10px black;
+}
+.box p {
+  color: aquamarine;
+}
+.box li {
+  color: #333;
+}
+.list li:nth-child(4) {
+  font-size: 14px;
+}
+.list li:nth-child(3) {
+  font-size: 13px;
+}
+.list li:nth-child(2) {
+  font-size: 12px;
+}
+.list li:nth-child(1) {
+  font-size: 11px;
+}

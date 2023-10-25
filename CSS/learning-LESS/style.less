@@ -1,0 +1,56 @@
+// Variables
+
+@bgcolor: lightblue;
+@text: blue;
+@b: body;
+
+@{b}{
+    background-color: @bgcolor;
+} 
+
+.box{
+    background-color: aliceblue;
+    .shadows();
+    p{
+        .text(aquamarine);
+    }
+
+    li{
+        .textBlack(black)
+    }
+
+
+}
+
+
+// Mixins
+
+.shadows() {
+    box-shadow: 0px 0px 10px black;
+}
+
+.text(@color) {
+    color: @color;
+}
+
+// Conditional Mixin
+
+.textBlack(@value) when (@value = black){
+    color: #333;
+}
+
+// Loop
+.loop(@count) when (@count > 0) {
+    
+    .list li:nth-child(@{count})
+    {
+        font-size: 10px + @count;
+    } 
+        
+    .loop(@count - 1);
+}
+
+.loop(4);
+
+
+

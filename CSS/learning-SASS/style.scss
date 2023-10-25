@@ -1,0 +1,68 @@
+@use '_base';
+
+$general-font: sans-serif, Helvetica, Arial;
+$background-color: #CCC;
+$background-colortwo: beige;
+$letter-color: aliceblue;
+$letter-secondary: gray;
+
+// Mixins Functions
+
+@mixin createBorder($color, $border-radius) {
+    border: 5px solid $color;
+    border-radius: $border-radius;
+    
+}
+
+h1{
+    color: $letter-color;
+}
+
+p{
+    color: $letter-secondary;
+}
+
+.box{
+    background-color: $background-colortwo;
+    // Using Module
+    @include createBorder(cadetblue, 5%);
+    // Using inheritance
+    @extend %config-box;
+    .title{
+        background-color: bisque;
+    }
+    p{
+        color:cadetblue;
+    }
+}
+
+// Math op
+
+.usingMath {
+    width: 300px / 200px * 50%;
+    background-color: $background-colortwo;
+    margin: 0px auto;
+    color: $letter-color;
+    @extend %config-box;
+    p{
+        // if
+
+        @if $letter-color == red {
+            background-color: black;
+        } @else {
+            background-color: powderblue;
+        }
+    }
+}
+
+
+// For
+
+$count: 1;
+
+@for $count from 1 through 8 {
+
+    .list li:nth-child(#{$count}){
+        font-size: $count + 10px;
+    }
+}

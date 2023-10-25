@@ -1,0 +1,73 @@
+body {
+  font-family: sans-serif, Helvetica, Arial;
+  background-color: #CCC;
+}
+
+.box, .usingMath {
+  margin: 10px auto;
+  padding: 20px;
+}
+
+h1 {
+  color: aliceblue;
+}
+
+p {
+  color: gray;
+}
+
+.box {
+  background-color: beige;
+  border: 5px solid cadetblue;
+  border-radius: 5%;
+}
+.box .title {
+  background-color: bisque;
+}
+.box p {
+  color: cadetblue;
+}
+
+.usingMath {
+  width: 75%;
+  background-color: beige;
+  margin: 0px auto;
+  color: aliceblue;
+}
+.usingMath p {
+  background-color: powderblue;
+}
+
+.list li:nth-child(1) {
+  font-size: 11px;
+}
+
+.list li:nth-child(2) {
+  font-size: 12px;
+}
+
+.list li:nth-child(3) {
+  font-size: 13px;
+}
+
+.list li:nth-child(4) {
+  font-size: 14px;
+}
+
+.list li:nth-child(5) {
+  font-size: 15px;
+}
+
+.list li:nth-child(6) {
+  font-size: 16px;
+}
+
+.list li:nth-child(7) {
+  font-size: 17px;
+}
+
+.list li:nth-child(8) {
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */
