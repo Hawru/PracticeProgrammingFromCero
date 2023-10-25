@@ -1,0 +1,711 @@
+/* FONTS */
+@font-face {
+    font-family: "TrebuchetMS";
+    src: url("fonts/TrebuchetMS.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("fonts/BebasNeue.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "webSymbolsRegular";
+    src: url("fonts/websymbols-regular-webfont.eot");
+    src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("fonts/websymbols-regular-webfont.ttf") format("truetype"),
+        url("fonts/websymbols-regular-webfont.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* GENERAL */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url("../img/pattern.png");
+}
+
+.gear, .icon{
+    font-family: "webSymbolsRegular";
+}
+
+.wrap {
+    width: 1250px;
+    margin: 0px auto;
+}
+
+.clearfix{
+    clear: both;
+}
+
+
+/* HEADER */
+
+#header{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    font-family: "BebasNeue";
+}
+
+#logo{
+    float: left;
+    width: 200px;
+    background-color: #37bcf9;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms;
+}
+
+#logo h3{
+    font-size: 40px;
+    display: block;
+    float: right;
+    margin-top: 5px;
+    transition: all 300ms;
+    margin-right: 65px;
+}
+
+#logo:hover h3{
+    animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight {
+    from{
+        transform: translateX(200%)
+    }
+    to{
+        transform: translateX(0%)
+    }
+}
+
+#logo .gear{
+    display: block;
+    float: left;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 26px;
+    animation: rotate-gear 2s infinite linear;
+}
+
+#logo:hover{
+    border-radius: 2px;
+    color: black;
+    background-color: #ccc;
+}
+
+#logo:hover .gear{
+    animation: fromBellow 500ms linear;
+}
+
+@keyframes fromBellow {
+    0%{
+        transform: translateY(0%)
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes rotate-gear {
+    from{
+        transform: rotateZ(0deg);
+    } to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* MENU */
+
+#menu{
+    float: right;
+    height: 70px;
+    margin-right: 20px;
+    background: transparent;
+}
+
+#menu ul li {
+    font-size: 24px;
+    display: inline-block ;
+    margin: 0px 20px;
+    letter-spacing: 1px;
+    line-height: 70px;
+}
+#menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: all 200ms;
+}
+
+#menu ul li a:hover{
+    color: #37bcf9;
+    transform: scale(1.2, 1.2);
+}
+
+/* BANNER */
+#banner {
+    width: 95.5%;
+    height: 100px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    background-image: url("../img/bakbaner.png");
+    background-position: -200px -200px;
+    margin: 20px auto;
+    overflow: hidden;
+    animation: backBanner 10s linear;
+}
+
+
+
+@keyframes backBanner {
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -200px -200px;
+    }
+}
+
+#banner h1{
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    line-height: 100px;
+    display: block;
+    font-family: "BebasNeue";
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-shadow: 2px 2px 1px black;
+    animation: showText 10s linear;
+}
+
+@keyframes showText {
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1, 1);
+        opacity: 1;
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        
+    }
+}
+
+/* CARDS */
+
+.card{
+    float: left;
+    overflow: hidden;
+    margin: 22px;
+    margin-top: 40px;
+    width: 205px;
+    height: 305px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ddd;
+    background-color: white;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.card:hover{
+    background-color: black;
+}
+
+
+.card:last-child{
+  margin-right: 0px;
+}
+
+.card .icon{
+    display: block;
+    width: 100%;
+    height: 130px;
+    font-size: 50px;
+    line-height: 110px;
+    text-align: center;
+    margin: 0px auto;
+    transition: all 300ms;
+}
+
+.card:hover .icon{
+    font-size: 70px;
+    color: #37bcf9;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon {
+    from{
+        transform: translateY(-200%);
+    } to {
+        transform: translateY(0%);
+    }
+}
+
+.card .category{
+    width: 100%;
+    height: 50px;
+    font-family: "TrebuchetMS";
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: #00538c;
+    transition: all 300ms;
+}
+
+.card:hover .category{
+    color: white;
+    animation: showCategory 500ms linear;
+}
+@keyframes showCategory {
+    from{
+        transform: translateY(-300%);
+        color: black
+    } to {
+        transform: translateY(0%);
+        color: white;
+    }
+}
+
+.card .description {
+    text-align: center;
+    font-family: "TrebuchetMS";
+    color: #0370b9;
+    font-size: 15px;
+    transition: all 300ms;
+}
+
+.card:hover .description {
+    color: white;
+    animation: showDescription 600ms linear;
+}
+
+@keyframes showDescription {
+    from{
+        transform: translateX(-300%);
+        color: black;
+    } to {
+        transform: translateX(0%);
+        color: white;
+    }
+}
+
+/* SIDE BAR */
+#aside {
+    width: 300px;
+    min-height: 1200px;
+    font-family: "TrebuchetMS";
+    float: right;
+    margin: 20px;
+}
+
+#aside h3{
+    display: block;
+    width: auto;
+    height: 45px;
+    line-height: 49px;
+    background: url("../img/pxgray.png"), white;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 2px #393d3f;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-family: "BebasNeue";
+    padding-left: 15px;
+    margin: 30px 0px 15px 0px;
+}
+
+#aside h3:first-child{
+    margin-top: 0px;
+}
+
+#search{
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 4px #ccc inset;
+
+}
+
+#aside input[type="text"]{
+    width: 85%;
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ccc;
+    transition: all 300ms;
+}
+
+#aside input[type="submit"], #aside input[type="button"]{
+    height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    border-left: 1px solid #ccc;
+    padding-left: 6px;
+    color: #555;
+}
+#aside input[type="text"]:focus{
+    color: #555;
+}
+
+.aside-box{
+    width: 85%;
+    height: 240px;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-top: 2px;
+    background-color: white;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3), 0px 1px 0px white inset, 0px -3px 2px rgba(0,0,0,0.3) inset;
+}
+
+#login input[type="email"], #login input[type="password"]{
+    display: block;
+    width: 82%;
+    margin: 0px auto;
+    height: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #ccc inset;
+    color: gray;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding-left: 35px;
+}
+
+#login input[type="email"]:focus, #login input[type="password"]:focus{
+    color: #555;
+    box-shadow: 1px 1px 1px gray inset;
+}
+
+#login #user{
+    position: absolute;
+    display: block;
+    text-align: center;
+    margin-top: 6px;
+    margin-left: 15px;
+    height: 30px;
+}
+
+#login #password {
+    position: absolute;
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 15px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#login input[type="submit"], #login input[type="reset"], #login input[type="button"], #login button{
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
+    border: 1px solid #156785;
+    font-family: "TrebuchetMS";
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-left: 17px;
+    transition: all 300ms;
+    margin-bottom: 20px;
+}
+
+#login input[type="submit"]:hover, #login input[type="reset"]:hover, #login input[type="button"]:hover, button:hover{
+    box-shadow: 0px 0px 3px gray;
+}
+
+#login a{
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    margin-left: 10px;
+    color: #555;
+}
+
+#login a:hover{
+    text-decoration: underline;
+    color: #2f78b6;
+}
+
+#social a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 15px 0px 10px 20px;
+
+}
+
+#social {
+    height: 190px;
+}
+
+#social .overlay{
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border: 3px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    background: #f4f7fe;
+    position: absolute;
+    padding: 5px;
+    margin-left: 70px;
+    margin-top: -40px;
+    cursor: pointer;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+#social div:hover .overlay{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+/* ARTICLES */
+#articles{
+    width: 850px;
+    float: left;
+}
+
+#articles h2{
+    height: 75px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    line-height: 75px;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background: url("../img/pxgray.png") white;    
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 2px #393d3f;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#articles article{
+    width: 100%;
+    height: auto;
+    font-family: "TrebuchetMS";
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ddd;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+#articles article h4{
+    display: block;
+    font-size: 23px;
+    margin: 3px;
+
+}
+
+#articles article h4 a{
+    text-decoration: none;
+    color: #00538c; 
+}
+
+#articles article h4 a:hover{
+    text-decoration: underline;
+}
+
+#articles .data{
+    float: right;
+    background-color: #393d3f;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    margin: -10px;
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+#articles .data span {
+    margin: 6px;
+}
+
+#articles article p{
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+#blog {
+    height: 100px;
+    margin-top: 60px;
+    line-height: 100px;
+    text-align: center;
+    transition: all 1s;
+    
+}
+
+#blog a{
+    display: block;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #00538c;
+    transition: all 1s;
+}
+
+#blog:hover{
+    border: 10px solid #37bcf9;
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px gray;
+    background-color: #333;
+    animation: blink 10s infinite linear;
+}
+
+@keyframes blink {
+    0% {
+        border: 10px solid #37bcf9;
+    } 
+    25%{
+        border: 10px solid #b4e7ff;
+    }
+    50%{
+        border: 10px solid #37bcf9;
+    }
+    75%{
+        border: 10px solid #008dcf;
+    }
+    100%{
+        border: 10px solid #37bcf9;
+    }
+}
+
+#blog:hover a{
+    text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black, 1px 4px 1px black ;
+    color: white;
+}
+
+
+/* FOOTER */
+#footer{
+    width: 100%;
+    height: 470px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+#footer .wrap > div {
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: white;
+    font-family: "TrebuchetMS";
+}
+
+#footer a{
+    text-decoration: none;
+    color: #37bcf9;
+    transition: all 300ms;
+}
+
+#footer h5{
+    display: block;
+    background: url("../img/pxgray.png") white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    line-height: 50px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#footer ul{
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+}
+
+#footer ul li{
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    text-transform: uppercase;
+
+}
+
+#footer ul li a{
+    display: block;
+    height: 40px;
+    transition: all 300ms;
+}
+
+#footer ul li:hover a{
+    color: white;
+    padding-left: 20px;
+}
+
+#footer #location iframe{
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px gr;
+}
+
+#footer img{
+    margin-bottom: 15px;
+}
+
+#footer #browsers img{
+    width: 45px;
+}
