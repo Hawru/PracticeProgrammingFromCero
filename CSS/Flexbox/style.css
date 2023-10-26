@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(255, 220, 220);
+}
+
+#container {
+  border: 3px solid #333;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 180px;
+}
+#container .box {
+  flex-basis: 15%;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  border: 4px solid #333;
+  margin: 10px;
+  font-family: sans-serif;
+}
+#container .box:nth-child(1) {
+  background-color: cadetblue;
+}
+#container .box:nth-child(2) {
+  background-color: aquamarine;
+  margin-top: 3%;
+}
+#container .box:nth-child(3) {
+  background-color: antiquewhite;
+  margin-top: 3%;
+  align-self: center;
+}
+#container .box:nth-child(4) {
+  background-color: indianred;
+  align-self: flex-end;
+}
+
+/*# sourceMappingURL=style.css.map */
