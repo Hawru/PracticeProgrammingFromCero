@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+// FIRTS MODEL
+#container{
+    max-width: 1200px;
+    width: 90%;
+    min-height: calc(100vh - 60px) ;
+    height: auto;
+    display: grid;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    padding: 5px;
+
+    #header{
+        background-color: antiquewhite;
+        grid-column: 1 / 6;
+        grid-row: 1 / 4;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu{
+        background-color: lightblue;
+        grid-column: 1 / 6;
+        grid-row: 4 / 5;
+        ul{
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            li{
+                display: block;
+                padding: 10% 0px;
+            }
+        }
+    }
+
+    #content{
+        background-color: blanchedalmond;
+        grid-column: 1 / 4;
+        grid-row:  5 / 10;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        article{
+            background-color: lavender;
+            
+        }
+    }
+    #aside{
+        background-color: lightsteelblue;
+        grid-column: 4 / 6;
+        grid-row: 5 / 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #footer{
+        background-color: cadetblue;
+        grid-column: 1 / 6;
+        grid-row: 10 / 11;
+    }
+}
+
+//SECOND MODEL
+
+#container2{
+    max-width: 1200px;
+    width: 90%;
+    min-height: calc(100vh - 60px) ;
+    height: auto;
+    display: grid;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    grid-template-rows: 3fr 1fr 6fr 1fr;
+    grid-template-areas: 
+    "header header header header header"
+    "nav nav nav nav nav"
+    "aside aside content content content "
+    "footer footer footer footer footer";
+    padding: 5px;
+
+    #header{
+        background-color: antiquewhite;
+        grid-area: header;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu{
+        background-color: lightblue;
+        grid-area: nav;
+        ul{
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            li{
+                display: block;
+                padding: 10% 0px;
+            }
+        }
+    }
+
+    #content{
+        background-color: blanchedalmond;
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        article{
+            background-color: lavender;
+            
+        }
+    }
+    #aside{
+        background-color: lightsteelblue;
+        grid-area: aside;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #footer{
+        background-color: cadetblue;
+        grid-area: footer;
+    }
+}
