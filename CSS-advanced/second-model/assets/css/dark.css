@@ -1,0 +1,108 @@
+/* VARIABLES */
+:root{
+    --max-width: 1320px;
+    --color-text-body:  #D3D3D4;
+    --color-principal: #5956e9;
+    --color-secondary: #D3D3D4;
+    --color-banner: #27272E;
+    --color-text-btn: #fff;
+    --color-bg-btn: #2623ba;
+    --color-subtitle: #c75c6f;
+    --color-title: hsl(240, 1%, 83%);
+    --color-bg-service: #27272e;
+    --color-bg-project: #292930;
+    --color-bg-dark: #27272E;
+    --color-hover-dark: #303035;
+    --color-description: #99A1AA;
+    --color-border-news: #101016;
+    --color-yellow: #ffdc60;
+}
+body{
+    background-color: #212121;
+}
+
+.menu__navbar--fixed{
+    background-color: var(--color-banner);
+}
+
+.layout__banner{
+    border: none;
+}
+
+.banner__btn{
+    background-color: var(--color-principal);
+}
+
+.project__content{
+    background-color: var(--color-banner);
+}
+.project__tag{
+    color: var(--color-banner);
+}
+.review__description{
+    color: var(--color-text-body);
+}
+.new__more{
+    color: var(--color-text-body);
+}
+
+.layout__contact{
+    background-color: var(--color-banner) ;
+}
+
+.layout__contact::before{
+    background-color: #212121 ;
+}
+
+
+.contact__subtitle{
+    color: var(--color-yellow);
+}
+
+.contact__btn{
+    background-color: var(--color-principal);
+}
+
+.fleft__group{
+    background-color: var(--color-banner);
+    box-shadow: none;
+}
+
+.fleft__form-control{
+    background-color: var(--color-banner);
+    color: var(--color-title);
+}
+
+.menu-mobile{
+    background-color: var(--color-banner);
+}
+/* HOVER AND ANIMATIONS */
+.nav__submenu{
+    background-color: var(--color-banner);
+}
+
+.nav__title:hover{
+    color: var(--color-secondary);
+}
+
+.nav__title::after{
+    background-color: var(--color-secondary);
+}
+
+.submenu__title:hover{
+    color: var(--color-secondary);
+}
+
+.submenu__title::after{
+    background-color: var(--color-secondary);
+}
+
+.services__service {
+    background: none;
+    border-image-source: none;
+    background-color: var(--color-banner);
+}
+
+.project__title:hover{
+    color: var(--color-yellow);
+}
